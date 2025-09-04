@@ -1,0 +1,60 @@
+.video-box {
+            position: relative;
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .video-box video.main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+            transition: filter 0.4s ease;
+        }
+
+        .video-box:hover video.main {
+            filter: brightness(100%);
+        }
+
+        /* Smoke video jako overlay */
+        .video-box video.smoke {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            mix-blend-mode: screen; /* sprawdź czy działa z Twoim smoke.mp4 */
+        }
+
+        .video-box:hover video.smoke {
+            opacity: 1;
+        }
+
+        /* Overlay napis */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .video-box:hover .overlay {
+            opacity: 1;
+        } 

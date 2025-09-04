@@ -1,0 +1,261 @@
+/* Stylowanie zaznaczonego tekstu */
+::selection {
+    background: #BB8100;
+    color: black;
+}
+
+::-webkit-selection {
+    background: #BB8100;
+    color: black;
+}
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Styl dla złotego prostokąta */
+.golden-rectangle {
+    background-color: black;
+    color: white;
+    width: 80%;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+/* Kontener na projekty */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Styl dla poszczególnych projektów */
+.project {
+    width: 70%;
+    height: 500px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.project-title {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+}
+
+.project-description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s;
+    max-height: 420px; /* Ustaw maksymalną wysokość */
+    overflow-y: scroll; /* Dodaj przewijanie wewnętrzne */
+    box-sizing: border-box; /* Upewnij się, że padding jest uwzględniony w szerokości elementu */
+    padding: 10px;
+}
+
+/* Ukrywanie scrollbara w przeglądarkach WebKit */
+.project-description::-webkit-scrollbar {
+    display: none;
+}
+
+.project:hover .project-title,
+.project:hover .project-description {
+    opacity: 1;
+}
+
+/* Dodanie by słowa np. e-sport były "razem " */
+
+.no-break { 
+    white-space: nowrap;
+}
+
+/* -- BOCZNE PRZYCISKI -- */
+.content {
+    /*padding: 20px;*/
+}
+
+section {
+    padding: 50px;
+    margin: 20px 0;
+}
+
+#buttons-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    -webkit-transition: opacity 0.3s ease, transform 0.3s ease;
+    -moz-transition: opacity 0.3s ease, transform 0.3s ease;
+    -ms-transition: opacity 0.3s ease, transform 0.3s ease;
+    -o-transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.buttons-hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+}
+
+.buttons-visible {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #333;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #555;
+    color: #BB8100;
+}
+
+/* -- BANNER -- */
+.banner {
+    background: transparent url(/images/background.png) 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    /*margin-bottom: 3em;*/
+    display: table;
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-shadow: 0 1px 1px black;
+}
+
+/* -- FOOTER -- */
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+
+.footer a {
+    color: #ddd;
+}
+
+/* -- BASE STYLES -- */
+body {
+    background-color: #BB8100;
+    color: #526066;
+    scroll-behavior: smooth;
+}
+
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+/* -- LAYOUT STYLES -- */
+.l-content {
+    margin: 0 auto;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+/* -- MEDIA QUERIES -- */
+@media (min-width: 767px) {
+    .banner-head {
+        font-size: 4em;
+    }
+
+    .pricing-table {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 480px) {
+    .banner {
+        height: 400px;
+    }
+
+    .banner-head {
+        font-size: 3em;
+    }
+}
