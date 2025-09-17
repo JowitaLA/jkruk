@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="pl"> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>Monwiz</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="../assets/css/styles.css">
+
+
+        <style type="text/css">
+        canvas{width: 100%;}
+            @font-face {
+            font-family: 'Alagard';
+            src: url('assets/fonts/alagard.ttf') format('truetype'); /* Ustaw ścieżkę do pliku fontu */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            font-family: 'Alagard', sans-serif; /* Ustawienie fontu dla całej strony */
+            background-color: #000000;
+            background-image: url('assets/menu/forest.jpg'); /* Ścieżka do pliku PNG */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .login-box {
+            width: 300px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 100px;
+        }
+        .login-box h2 {
+                margin-bottom: 20px;
+                text-align: center;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+                width: calc(100% - 40px);
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+        }
+            .login-box [type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+        
+    </head>
+    
+    <body> 
+    
+    <div class = "container">
+        <div class= "login-box" id="loginFormContainer">
+                <h2>Logowanie</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Nazwa użytkownika" required>
+                    <input type="password" id="loginPassword" placeholder="Hasło" required>
+                    <button type="submit">Zaloguj</button>
+                </form>
+                <div id="loginMessage"></div>
+        </div>
+
+        <div class="login-box" id="registerFormContainer">
+            <h2>Nie masz jeszcze Konta? Zarejestruj się!</h2>
+            <form id="registerForm" method="post">
+                <input type="text" id="registerUsername" placeholder="Nazwa użytkownika" required>
+                <input type="password" id="registerPassword" placeholder="Hasło" pattern="^(?=.*\d)(?=.*[_!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$" title="Hasło musi zawierać co najmniej 6 znaków, dużą literę, małą literę, cyfrę i znak specjalny" required>
+                <input type="password" id="confirmPassword" placeholder="Powtórz hasło" required>
+                <button type="submit">Zarejestruj</button>
+            </form>
+            <div id="registerMessage"></div>
+        </div>
+        
+    </div>
+        <script src="login/login.js"></script>
+    
+    </body>
+</html>

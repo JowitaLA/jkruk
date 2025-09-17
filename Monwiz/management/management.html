@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edycja użytkownika i questa</title>
+    <link rel="stylesheet" href="../assets/css/menagement.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="management-buttons">
+            <button class="tab-button active" onclick="showUsersTable()">Zarządzanie użytkownikami</button>
+            <button class="tab-button active" onclick="window.location.href='../login/game.html'">Powrót do Menu</button>
+            <button class="tab-button active" onclick="showQuestsTable()">Zarządzanie questami</button>
+        </div>
+
+        <div id="usersManagement" class="user-edit">
+            <h2>Edycja użytkownika</h2>
+            <input type="text" id="userSearchInput" placeholder="Wyszukaj gracza...">
+            <button onclick="searchUser()">Szukaj</button>
+            <button onclick="showAddUserForm()">Dodaj nowego</button>
+            <table id="userTable">
+                <!-- Table headers -->
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Hasło</th>
+                        <th>EXP</th>
+                        <th>HP</th>
+                        <th>DMG</th>
+                        <th>Pozycja X</th>
+                        <th>Pozycja Y</th>
+                        <th>Rola</th>
+                        <th>Akcja</th>
+                    </tr>
+                </thead>
+                <!-- Table body will be populated by JavaScript -->
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="questsManagement" class="quest-edit">
+            <h2>Edycja questa</h2>
+            <input type="text" id="questSearchInput" placeholder="Wyszukaj questa...">
+            <button onclick="searchQuest()">Szukaj</button>
+            <button onclick="showAddQuestForm()">Dodaj nowego</button>
+            <table id="questTable">
+                <!-- Table headers -->
+                <thead>
+                    <tr>
+                        <th>NPC</th>
+                        <th>Tytuł</th>
+                        <th>Dialog NPC</th>
+                        <th>LvL</th>
+                        <th>Nazwa Celu</th>
+                        <th>Cel</th>
+                        <th>Nagroda EXP</th>
+                        <th>Nagroda HP</th>
+                        <th>Nagroda DMG</th>
+                        <th>Akcja</th>
+                    </tr>
+                </thead>
+                <!-- Table body will be populated by JavaScript -->
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Edit and Add forms -->
+        <div id="editForm" style="display:none;">
+            <!-- Form fields for editing -->
+        </div>
+    </div>
+
+    <script src="../management/management.js"></script>
+</body>
+
+</html>

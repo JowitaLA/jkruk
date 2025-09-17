@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl"> 
+<head>
+    <meta charset="UTF-8" />
+    <title>Monwiz</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" >
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+
+    <!-- Poprawione ścieżki do plików JavaScript -->
+    <script src="../js/scenes/load.js"></script>   <!-- Ładowanie assetów -->
+    <script src="../js/scenes/menu.js"></script>   <!-- Menu -->
+    <script src="../js/scenes/play.js"></script>   <!-- Rozgrywka -->
+    <script src="../js/scenes/dead.js"></script>    <!-- Ekran Wygranej -->
+    <script src="../js/scenes/option.js"></script>    <!-- Ekran Wygranej -->
+    <script src="../js/scenes/management.js"></script>    <!-- Ekran Wygranej -->
+    <script src="../js/scenes/help.js"></script>    <!-- Ekran Wygranej -->
+    <script src="../js/scenes/logout.js"></script>    <!-- Ekran Wygranej -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <div id="game-data" data-endpoint="/get-game-data"></div>
+
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        font-family: 'Alagard', sans-serif; /* Ustawienie fontu dla całej strony */
+        background-color: #000000;
+    }
+</style>
+
+</head>
+    
+<body>
+    <script src="../js/game.js"></script>          <!-- Konfiguracja Gry --> 
+</body>
+</html>
